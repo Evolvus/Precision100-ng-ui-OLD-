@@ -1,0 +1,47 @@
+<nav class="navbar">
+  <div class="navbar-left-elements">
+    <!-- <i class="fa fa-home" (click)="navigate('home')"></i> -->
+    <i class="fa fa-bars" (click)="openSideNavigationBar()"></i>
+ 
+    <a class="navbar-brand">
+      <font style="font-weight: bolder;" color="white">Precision-100</font>
+    </a>
+
+  </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuToggle" aria-controls="navbarTogglerDemo02"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navbar-right-elements" id="menuToggle">
+    <ul class="nav justify-content-end">
+   
+      <li class="nav-item nav-item-icons">
+        <a class="nav-link">
+          <button [matMenuTriggerFor]="menu3" #menuTrigger3="matMenuTrigger" (mouseover)="menuTrigger3.openMenu()">
+            <i class="fa fa-icons fa-user"></i>
+          </button>
+          <mat-menu #menu3="matMenu">
+            <div class="user-dropdown" (mouseleave)="menuTrigger3.closeMenu()">
+              <div class="row">
+                  <div class="user-details col-md-8">
+                      <p><small>User Id</small> <br>  Helmsman</p>
+                      <p><small>Role</small> <br>  Merchant Maker</p>
+                      <button mat-raised-button>Logout</button>
+                    </div>
+                <div class="user-image col-md-4">
+                  <img src="../../../assets/user.png" alt="User-Image">
+                </div>
+              </div>
+
+          
+            </div> 
+          </mat-menu>
+
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>

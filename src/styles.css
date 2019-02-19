@@ -1,1 +1,121 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');  
+
+  
+.sub-container{
+    width: 98%;
+}
+.title{
+    padding-top: 15px;
+    color: #E97631;
+}
+.title h4{
+    padding-bottom: 10px; 
+    border-bottom: 2px solid lightgrey;
+}
+.sub-title h5{
+    color: #1F72A4; 
+}
+.example-list {
+    max-width: 100%;
+    border: solid 1px #ccc;
+    height:auto;
+    display: block;
+    overflow-y: auto;
+    background: white;
+    border-radius: 4px;
+  }
+  
+  .example-box {
+    padding: 15px 15px;
+    border-bottom: solid 1px #ccc;
+    color: rgba(0, 0, 0, 0.87);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    cursor: move;
+    background: white;
+    font-size: 1em;
+  }
+  .example-box span{
+      float: right;
+  }
+  .example-box .fa-times-circle{
+      font-size: 1.1em;
+  }
+  .example-box .fa-times-circle:hover{
+    color: red;
+}
+  .cdk-drag-preview {
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+                0 8px 10px 1px rgba(0, 0, 0, 0.14),
+                0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+  
+  .cdk-drag-placeholder {
+    opacity: 0;
+  }
+  
+  .cdk-drag-animating {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+  
+
+  
+  .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
+    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+  }
+  .title .fa-angle-left{
+    font-size: 1.5em;  
+    margin-right: 6px;
+    position: relative;
+    top: 4px;
+    cursor: pointer;
+}
+.custom-buttons{
+    margin-top: 15em;
+    position: inherit;
+    top: 2.5em;
+    text-align: center;
+}
+/* .fa-times{
+    margin-left: 5px;
+    font-size: 1em; 
+    margin-bottom: 2px;
+} */
+
+.custom-buttons button{
+    margin-right: 8px;
+}
+.customBtn{
+    border-radius: 2em;
+    outline: 0;
+    color: white;
+
+}
+
+.resetButton{
+    width: 7em;
+    background-color: grey;
+}
+.submitButton{
+    width: 10em;
+    background-color: grey;
+}  
+
+.closeButton{
+    border: 1px solid grey;
+    color: grey;
+    width: 7em;
+}
+.customBtn:hover{
+    z-index: 10;
+    box-shadow: 1px 1px 1px 1px grey;
+}

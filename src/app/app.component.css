@@ -1,0 +1,21 @@
+.container-fluid {
+    padding-right:0;
+    padding-left:0;
+    overflow-x: hidden;
+    margin-top: 0;
+    margin-bottom: 0;
+ }
+app-side-navigation{
+    display: none;
+    transition: 2s;
+}
+.withSideBar{
+margin-left: 0;
+margin-left: 13em;
+margin-bottom: 4em;
+}
+.withoutSideBar{
+    margin-left: 1em;
+    margin-bottom: 3em;
+
+    }

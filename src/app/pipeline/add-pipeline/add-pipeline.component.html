@@ -1,0 +1,80 @@
+<div class="sub-container">
+    <div class="row">
+
+        <div class="col-md-12 title">
+            <h4>
+                <i class="fa fa-angle-left" (click)="cancel()" matTooltip="Back" aria-hidden="true"></i> Pipeline Maintenance</h4>
+        </div>
+        <div class="col-md-12 sub-title">
+            <h5>New Pipeline</h5>
+        </div>
+        <div class="col-md-4 input-field">
+            <mat-form-field>
+                <input matInput placeholder="Name">
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-8 input-field">
+            <mat-form-field>
+                <input matInput placeholder="Description">
+            </mat-form-field>
+        </div>
+        <div class="col-md-4"></div>
+
+        <div class="col-md-12 select-container input-title">
+            <h6>Select Containers</h6>
+        </div>
+        <div class="select-container-available col-md-6">
+
+            <mat-card class="main-mat-card">
+                <mat-card class="card-main-title">Available Containers</mat-card>
+                <div class="scrollBlock">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" *ngFor="let container of availableContainers; let i=index">
+                            {{container.name}}
+                            <i class="fa fa-plus-circle" matTooltip="Add Container" (click)="addContainer(container, i)"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- <h6 *ngIf="listOfNonSelectedChargeCodes.leng th==0" class="text-danger text-center mt-4 py-5"> No Available Charge Codes</h6> -->
+            </mat-card>
+        </div>
+
+        <div class="select-container-selected col-md-6">
+            <mat-card class="main-mat-card">
+                <mat-card class="card-main-title">Selected Containers
+                    <span style="font-size: 11px;">(Drag and Drop to Change the Order)</span>
+                </mat-card>
+                <div class="scrollBlock">
+                   
+                    <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+                        <div class="example-box" *ngFor="let container of selectedContainers; let k=index" cdkDrag>
+
+                            {{container.name}}
+                            <span [matBadge]=(k+1)*10 matTooltip="Drag And Drop to Change the Order" s
+                                matBadgeOverlap="false">
+                                <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+                            </span>
+                            <i class="fa fa-times-circle" matTooltip="Remove Container" (click)="removeContainer(container, k)"></i>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- <h6 *ngIf="selectedContainers.length==0" class="text-danger text-center mt-4 py-5"> No Available Charge Codes</h6> -->
+            </mat-card>
+
+        </div>
+
+
+
+        <div class="col-md-12 custom-buttons">
+            <button class="customBtn submitButton" mat-raised-button>Submit</button>
+            <button class="customBtn resetButton" mat-raised-button>Reset</button>
+            <button class="customBtn closeButton" mat-raised-button>Close</button>
+
+        </div>
+    </div>
+
+
+</div>

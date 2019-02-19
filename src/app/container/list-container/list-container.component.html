@@ -1,0 +1,31 @@
+<div class="sub-container" >
+<div class="row">
+    <div class="col-md-12 title">
+           
+        <h4> <i class="fa fa-angle-left" matTooltip="Back"  aria-hidden="true"></i> Container Maintenance</h4>
+
+</div>
+<div class="col-md-12 sub-title">
+    <h5>Result Containers</h5>
+  </div>
+</div>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Last Updated Date</th>
+            <th scope="col">No of Files</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let container of availableContainers; let i = index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{container.name}}</td>
+            <td>{{container.updated}}</td>
+            <td>{{container.files.length}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>

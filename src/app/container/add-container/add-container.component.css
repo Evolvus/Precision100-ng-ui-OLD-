@@ -1,0 +1,62 @@
+
+mat-form-field{
+    width: 100%;
+}
+.title{
+    margin-bottom: 1em;
+}
+.upload-field{
+margin-top: 15px;
+}
+.upload-field input{
+    display: none;
+}
+.upload-field button{
+    outline: none;
+    border-radius: 2em;
+background-color: grey;
+
+}
+.uploaded-files{
+    margin-top: 1em;
+}
+.custom-buttons{
+    margin-top: 15em;
+    position: inherit;
+    top: 2.5em;
+    text-align: center;
+}
+/* .fa-times{
+    margin-left: 5px;
+    font-size: 1em; 
+    margin-bottom: 2px;
+} */
+
+.custom-buttons button{
+    margin-right: 8px;
+}
+.customBtn{
+    border-radius: 2em;
+    outline: 0;
+    color: white;
+
+}
+
+.resetButton{
+    width: 7em;
+    background-color: grey;
+}
+.submitButton{
+    width: 10em;
+    background-color: grey;
+}  
+
+.closeButton{
+    border: 1px solid grey;
+    color: grey;
+    width: 7em;
+}
+.customBtn:hover{
+    z-index: 10;
+    box-shadow: 1px 1px 1px 1px grey;
+}

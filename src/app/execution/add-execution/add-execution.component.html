@@ -1,0 +1,74 @@
+<div class="sub-container">
+  <div class="row">
+
+    <div class="col-md-12 title">
+
+      <h4>
+        <i class="fa fa-angle-left" (click)="cancel()" matTooltip="Back" aria-hidden="true"></i> Execution Maintenance</h4>
+    </div>
+    <div class="col-md-12 sub-title">
+      <h5>New Execution</h5>
+    </div>
+<div class="col-md-12">
+    <mat-tab-group  (selectedTabChange)="tabChanged()">
+        <mat-tab label="Pipelines" class="col-md-6"></mat-tab>
+        <mat-tab label="Containers" class="col-md-6"></mat-tab>
+      </mat-tab-group>
+</div>
+
+    <div class="col-md-10 pipelineTitle" *ngIf="isExecutionByPipeline">
+      <label class="sub-title">Available Pipelines</label>
+      <label class="selectAll">
+        Select All
+        <mat-checkbox></mat-checkbox>
+      </label>
+    </div>
+
+    <div cdkDropList class="col-md-10 example-list" (cdkDropListDropped)="drop($event)" *ngIf="isExecutionByPipeline">
+      <div class="example-box" *ngFor="let pipeline of listOfPipelines; let k=index" cdkDrag>
+
+        {{pipeline?.name}}
+        <span [matBadge]=(k+1)*10 matTooltip="Drag And Drop to Change the Order" s matBadgeOverlap="false">
+          <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+        </span>
+        <!-- <i class="fa fa-times-circle" matTooltip="Remove Container" (click)="removeContainer(container, k)"></i> -->
+        <mat-checkbox></mat-checkbox>
+      </div>
+    </div>
+    <div class="col-md-10 input-field" *ngIf="!isExecutionByPipeline">
+      <mat-form-field>
+        <mat-select placeholder="Select a Pipeline" (selectionChange)="selectPipeline($event)">
+          <mat-option *ngFor="let pipeline of listOfPipelines" [value]="pipeline">
+            {{pipeline.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-md-12 sub-title" *ngIf="!isExecutionByPipeline">
+      <label class="sub-title" *ngIf="isValidPipelineSelected">Available Containers</label>
+    </div>
+    <div cdkDropList class="col-md-10 example-list" *ngIf="isValidPipelineSelected && !isExecutionByPipeline" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let container of selectedPipeline?.listOfContainers; let k=index" cdkDrag>
+
+        {{container?.name}}
+        <span [matBadge]=(k+1)*10 matTooltip="Drag And Drop to Change the Order" s matBadgeOverlap="false">
+          <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+        </span>
+        <mat-checkbox></mat-checkbox>
+
+      </div>
+    </div>
+
+
+
+
+
+    <div class="col-md-12 custom-buttons" >
+      <button class="customBtn submitButton" mat-raised-button>Execute</button>
+      <button class="customBtn closeButton" mat-raised-button>Close</button>
+
+    </div>
+  </div>
+
+
+</div>

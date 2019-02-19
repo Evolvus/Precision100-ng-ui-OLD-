@@ -1,0 +1,31 @@
+<div class="sub-container" >
+    <div class="row">
+        <div class="col-md-12 title">
+               
+            <h4> <i class="fa fa-angle-left" matTooltip="Back"  aria-hidden="true"></i> Pipeline Maintenance</h4>
+    
+    </div>
+    <div class="col-md-12 sub-title">
+        <h5>Result Pipelines</h5>
+      </div>
+    </div>
+    
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Last Updated Date</th>
+                <th scope="col">No of Containers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let pipeline of listOfPipelines; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{pipeline.name}}</td>
+                <td>{{pipeline.lastUpdatedDate}}</td>
+                <td>{{pipeline.listOfContainers.length}}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>

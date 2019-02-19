@@ -1,0 +1,47 @@
+<div class="sub-container">
+    <div class="row">
+
+            <div class="col-md-12 title">
+           
+                    <h4> <i class="fa fa-angle-left" (click)="cancel()" matTooltip="Back"  aria-hidden="true"></i> Container Maintenance</h4>
+ 
+      </div>
+       <div class="col-md-12 sub-title">
+         <h5>New Container</h5>
+       </div>
+        <div class="col-md-3 input-field">
+            <mat-form-field>
+                <input matInput placeholder="Name">
+            </mat-form-field>
+        </div>
+
+        <div class="col-md-5 input-field">
+            <mat-form-field>
+                <input matInput placeholder="Description">
+            </mat-form-field>
+        </div>
+        <div class="col-md-4"></div>
+
+        <div class="col-md-5 upload-field">
+            <input type="file" #fileInput (change)="file($event)">
+            <button (click)="fileInput.click()" mat-raised-button color="primary">Upload Files</button>
+        </div>
+        <div class="col-md-7"></div>
+        <div class="col-md-12 uploaded-files" >
+            <mat-chip-list #chipList>
+                <mat-chip color="primary" *ngFor="let file of listOfSelectedFiles; let i=index" (removed)="remove(file, i)">
+                    {{file.name}}
+                    <mat-icon matChipRemove>cancel</mat-icon>
+                </mat-chip>
+            </mat-chip-list>
+        </div>
+        <div class="col-md-12 custom-buttons">
+                <button class="customBtn submitButton" mat-raised-button >Submit</button>
+                <button class="customBtn resetButton" mat-raised-button>Reset</button>
+                <button class="customBtn closeButton" mat-raised-button>Close</button>
+
+        </div>
+    </div>
+
+
+</div>

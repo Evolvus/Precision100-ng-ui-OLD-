@@ -1,0 +1,130 @@
+.navbar{
+background-color: #2a6592;
+margin: 0;
+width: 100%;
+z-index: 20;
+}
+.fa-home{
+    font-size: 20px;
+    color: black;
+    cursor: pointer; 
+}
+.fa-bars{
+    font-size: 1.1em;
+    color: white;
+    cursor: pointer;
+}
+.fa-bars:hover{
+    transition: 0.3s;
+}
+.navbar-left-elements .fa{
+    margin-right: 14px;
+}
+.brand-name{
+    color: #F7CF00;
+}
+font{
+    margin-right: 8px;
+}
+.navbar-brand{
+    font-size: 1.1em; 
+}
+.fa-repeat{
+    color: white;
+    margin-right: 5px;
+}
+
+ .nav-link{
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.nav-item{
+    margin-right: 10px;
+}
+
+.nav-item-time{
+    color: white;
+    align-content: center;
+}
+.nav-item-time font{
+    font-weight: bolder; 
+}
+
+.fa-icons{
+     color: #392785;
+     border-radius: 50%;   
+     padding: 6px;
+     padding-right: 7px;
+     padding-left: 7px;
+     cursor: pointer;
+} 
+
+.fa-user{
+    font-size: 1.2em;
+}
+
+ .nav li{
+     margin-right: 5px;
+ }
+
+ .nav-link button{
+    padding: 0;
+    background: none; 
+    border: none;
+    outline: none;
+}
+ mat-menu{
+    border: none !important;
+}
+.list-group-item{
+    border: none;
+}
+
+
+.user-dropdown{
+    padding-left: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding-right: 25px;
+    height: auto;
+    overflow: hidden;
+    padding-bottom: 10px;
+
+}
+ 
+
+.user-dropdown p{
+    font-size: auto;
+    margin-bottom: 3px;
+}
+.user-dropdown button{
+    margin-top: 3px;
+}
+.user-dropdown .user-image img{
+max-width: 5.5em;
+position: relative; 
+top: 1em;
+}
+.user-image{
+    margin-left: 0;
+    padding-left: 0;
+}
+.user-dropdown .user-details{
+    position: relative; 
+    top: 7px;
+}
+.user-details small{
+    color: #1C4074;
+    font-family: 'Noto Sans TC', sans-serif;
+
+}
+.user-details p{
+    color: #F48200;
+    font-family: 'Noto Sans TC', sans-serif;
+
+}

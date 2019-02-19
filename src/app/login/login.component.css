@@ -1,0 +1,55 @@
+.login-comp{
+text-align: center;
+/* border: 1px solid black; */
+height: 30em;
+margin-top: 5em;
+}
+.login-med{
+    margin-top: 1em;
+    margin-right: 3em;
+    margin-left: 3em;
+    height: 24em;
+    border: 1px solid white;
+    background-color: white;
+    box-shadow: 1px 1px 4px 4px lightgrey;
+    border-radius: 1em;
+}
+.main-title{
+    margin-top: 2em; 
+}
+.main-title h2{
+    font-family: 'Quicksand', sans-serif;
+}
+.sub-title {
+    margin-top: 1.5em;
+}
+
+.sub-title h4{
+    font-family: 'Quicksand', sans-serif;
+
+}
+.input-fields{
+    margin-top: 1em;
+}
+mat-form-field{
+    width: 80%;
+    color: grey;
+}
+button{
+    margin-top: 1.3em;
+    width: 80%;
+    border-radius: 1em;
+    font-size: 14px;
+    border: 1px solid grey;
+    color: grey; 
+outline: none;
+
+}  
+button:hover{
+    background-color: #3b5998;
+    color: white;
+    border: 1px solid white;
+
+
+
+}

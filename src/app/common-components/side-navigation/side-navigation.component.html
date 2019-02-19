@@ -1,0 +1,10 @@
+<div id="mySidenav" class="sidenav">
+
+<h6>Precision 100</h6>
+       <div class="side-menu-item"   *ngFor="let sideMenu of listOfSideMenus"  (mouseenter)="showActionButtons(sideMenu)" (mouseleave)="showActionButtons(sideMenu)">
+      {{sideMenu.name}}  <i class="fa fa-plus-circle" (click)="navToAdd(sideMenu)" matTooltip="Add"  *ngIf="sideMenu.actionButtonsVisible && sideMenu.actionButtonsAvailable"></i>
+        <i class="fa fa-list-alt" matTooltip="List View" (click)="navToListView(sideMenu)" *ngIf="sideMenu.actionButtonsVisible && sideMenu.actionButtonsAvailable"></i>
+     
+    </div>
+  
+  </div>  
